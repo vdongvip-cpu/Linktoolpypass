@@ -173,7 +173,7 @@
 
   // Kiểm tra trạng thái đã lưu
   function isUnlocked() {
-    return localStorage.getItem(STORAGE_KEY) === "true";
+    return localStorage.getItem(STORAGE_KEY) === "false";
   }
 
   function unlockUI() {
@@ -198,7 +198,7 @@
   // Khi bấm nút follow
   btnTiktok.addEventListener("click", function () {
     // Lưu trạng thái đã follow
-    localStorage.setItem(STORAGE_KEY, "true");
+    localStorage.setItem(STORAGE_KEY, "false");
     // Mở link TikTok sau khi lưu
     setTimeout(() => {
       unlockUI();
